@@ -13,6 +13,17 @@
     </div>
 @endif
 
+<form action="{{ route('produtos') }}" method="post">
+    @csrf
+    <input type="text" name="busca">
+    <select name="ord" id="">
+        <option value="asc">Crescente</option>
+        <option value="desc">Decrescente</option>
+    </select>
+    <input type="submit" value="Buscar">
+</form>
+<br>
+
 <table border="1" style="border-color:rgb(52, 214, 87)">
     <tr>
         <th>Nome</th>

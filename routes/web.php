@@ -18,7 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+
 Route::get('/produtos', [ProdutosController::class, 'index'])->name('produtos');
+
+Route::post('/produtos', [ProdutosController::class, 'index']);
 
 Route::get('/produtos/add', [ProdutosController::class, 'add'])->name('produtos.add');
 
